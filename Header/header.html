@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Header</title>
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='50' viewBox='0 0 150 50'%3E%3Ctext x='10' y='35' font-family='Arial, sans-serif' font-size='24' font-weight='bold' fill='%23666'%3ELOGO%3C/text%3E%3C/svg%3E" alt="Company Logo">
+            </div>
+
+            <!-- Mobile Toggle -->
+            <div class="mobile-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link has-dropdown">Products</a>
+                        <ul class="dropdown">
+                            <li class="dropdown-item">
+                                <a href="#air-filters" class="dropdown-link">Air Filters</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#air-tanks" class="dropdown-link">Air Tanks</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#oil-tanks" class="dropdown-link">Oil Tanks</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#sheet-metal" class="dropdown-link">Sheet Metal Assemblies</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#sub-assemblies" class="dropdown-link">Sub-Assemblies</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#facilities" class="nav-link has-dropdown">Facilities & Capabilities</a>
+                        <ul class="dropdown">
+                            <li class="dropdown-item">
+                                <a href="#press-shop" class="dropdown-link">Press Shop</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#welding" class="dropdown-link">Welding & Fabrication</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#powder-coating" class="dropdown-link">Powder Coating & Phosphating</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#qc-testing" class="dropdown-link">QC & Testing</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#tool-room" class="dropdown-link">Tool Room</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#machines" class="nav-link">Machines & Equipment</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#clients" class="nav-link">Clients & Industries</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#certifications" class="nav-link">Certifications</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#downloads" class="nav-link">Downloads</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link contact-btn">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="header.js"></script>
+</body>
+</html>
