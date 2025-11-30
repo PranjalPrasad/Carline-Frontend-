@@ -1,0 +1,114 @@
+/* OilTanks.css */
+
+/* Product Hero Section */
+.product-hero {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Form Styles */
+input, select, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Application Icons */
+.application-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .application-icon {
+    transform: scale(1.1);
+}
+
+/* Download Section */
+.download-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .product-hero h1 {
+        font-size: 2rem;
+    }
+    
+    table {
+        font-size: 0.875rem;
+    }
+    
+    th, td {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-hero {
+        min-height: 400px;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+/* Print Styles */
+@media print {
+    .cta-button,
+    .enquiry-form {
+        display: none;
+    }
+    
+    .product-hero {
+        background: white !important;
+        color: black !important;
+    }
+}

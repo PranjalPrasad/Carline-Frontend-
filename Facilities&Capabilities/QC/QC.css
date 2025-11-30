@@ -1,0 +1,120 @@
+/* QC.css */
+
+/* Page Header Styles */
+.page-header {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Testing Procedure Cards Animation */
+.testing-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.testing-card:hover::before {
+    left: 100%;
+}
+
+/* Quality Standards Section */
+.quality-standards {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .page-header {
+        min-height: 30vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .testing-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-header {
+        min-height: 50vh;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+.testing-card,
+.cta-button {
+    transition: all 0.3s ease;
+}
+
+/* Print Styles */
+@media print {
+    .cta-button {
+        display: none;
+    }
+    
+    .page-header {
+        min-height: auto;
+        background: white !important;
+        color: black;
+    }
+    
+    .text-gradient {
+        background: none;
+        -webkit-text-fill-color: black;
+        color: black;
+    }
+}
+
+/* Loading states */
+.testing-card img {
+    transition: opacity 0.3s ease;
+}
+
+.testing-card img:not([src]) {
+    opacity: 0;
+}
+
+/* Focus styles for accessibility */
+.testing-card:focus,
+.cta-button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Animation for content reveal */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}

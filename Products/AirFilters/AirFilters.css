@@ -1,0 +1,60 @@
+/* AirFilters.css */
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, select, textarea {
+    transition: all 0.3s ease;
+}
+
+/* Form focus states */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1);
+}
+
+/* Product card hover effects */
+.bg-white.rounded-xl.shadow-lg {
+    transition: all 0.3s ease;
+}
+
+.bg-white.rounded-xl.shadow-lg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .grid.grid-cols-1.lg\\:grid-cols-2.gap-8.lg\\:gap-12 {
+        gap: 1.5rem;
+    }
+    
+    .p-6.lg\\:p-8 {
+        padding: 1.5rem;
+    }
+    
+    .text-3xl.sm\\:text-4xl.lg\\:text-5xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .cta-button,
+    .bg-gray-50,
+    #enquiry {
+        display: none;
+    }
+    
+    .bg-white {
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+}

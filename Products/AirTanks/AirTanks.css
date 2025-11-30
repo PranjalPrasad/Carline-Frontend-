@@ -1,0 +1,90 @@
+/* Air Tanks Page Specific Styles */
+
+/* Product Hero Section */
+.product-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+/* Material Cards Hover Effect */
+.material-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #3b82f6;
+}
+
+/* Application Cards */
+.application-card {
+    transition: all 0.3s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Download Items */
+.download-item {
+    transition: all 0.2s ease;
+}
+
+.download-item:hover {
+    background-color: #f8fafc;
+    border-color: #3b82f6;
+}
+
+/* Form Styling */
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Table Styling */
+.spec-table {
+    border-collapse: collapse;
+}
+
+.spec-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.spec-table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .material-card, .application-card {
+        margin-bottom: 1rem;
+    }
+    
+    .spec-table {
+        font-size: 0.875rem;
+    }
+    
+    .spec-table th, .spec-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .cta-button, .download-section, .enquiry-form {
+        display: none;
+    }
+    
+    .product-hero {
+        background: white !important;
+        color: black !important;
+    }
+}

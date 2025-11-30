@@ -1,0 +1,99 @@
+/* PressShop.css */
+
+/* Page Header Styles */
+.page-header {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f2937;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* Card Hover Effects */
+.bg-white {
+    transition: all 0.3s ease;
+}
+
+.bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button Animations */
+.inline-flex {
+    transition: all 0.3s ease;
+}
+
+.inline-flex:hover {
+    transform: translateY(-2px);
+}
+
+/* Material and Application List Styles */
+ul.space-y-4 li {
+    transition: all 0.2s ease;
+}
+
+ul.space-y-4 li:hover {
+    transform: translateX(5px);
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .overflow-x-auto {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+    }
+    
+    table {
+        font-size: 0.875rem;
+    }
+    
+    th, td {
+        padding: 8px 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .breadcrumb,
+    .inline-flex,
+    #header-container,
+    #footer-container {
+        display: none;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th {
+        background-color: #f3f4f6 !important;
+        color: #000 !important;
+    }
+}

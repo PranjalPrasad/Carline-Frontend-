@@ -1,0 +1,349 @@
+/* fabrication.css */
+
+/* Hero Section Styles */
+.fabrication-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #4092f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero Headline Animation */
+.hero-headline {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-subheadline {
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CTA Buttons */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-primary:hover {
+    background: linear-gradient(to right, #1f2937, #111827);
+}
+
+.cta-secondary:hover {
+    background: #f9fafb;
+    border-color: #6b7280;
+}
+
+/* Capability Cards */
+.capability-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.capability-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #6b7280, #374151);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.capability-card:hover::before {
+    transform: scaleX(1);
+}
+
+.capability-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Capability Icon */
+.capability-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.capability-card:hover .capability-icon-wrapper {
+    background: linear-gradient(135deg, #374151, #1f2937);
+    transform: rotate(5deg) scale(1.1);
+}
+
+.capability-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+.capability-card:hover .capability-icon {
+    color: white;
+}
+
+/* Material Cards */
+.material-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.material-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.material-card:hover .material-icon-wrapper {
+    background: linear-gradient(135deg, #374151, #1f2937);
+}
+
+.material-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+.material-card:hover .material-icon {
+    color: white;
+}
+
+.material-tag {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.material-card:hover .material-tag {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+/* Application Cards */
+.application-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.application-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.application-card:hover .application-icon-wrapper {
+    background: linear-gradient(135deg, #374151, #1f2937);
+}
+
+.application-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+.application-card:hover .application-icon {
+    color: white;
+}
+
+/* Download Cards */
+.download-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.download-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.download-card:hover .download-icon-wrapper {
+    background: linear-gradient(135deg, #374151, #1f2937);
+}
+
+.download-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+.download-card:hover .download-icon {
+    color: white;
+}
+
+.download-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    transform: translateX(5px);
+}
+
+/* Form Styles */
+input, select, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .fabrication-hero {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+    
+    .capability-card, .material-card, .application-card, .download-card {
+        padding: 1.25rem;
+    }
+    
+    .capability-icon-wrapper {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .capability-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .fabrication-hero {
+        min-height: 70vh;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation for Images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+    opacity: 0;
+}
+
+/* Print Styles */
+@media print {
+    .cta-button,
+    .carousel-container {
+        display: none;
+    }
+}

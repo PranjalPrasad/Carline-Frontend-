@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machines & Equipment - Carline Auto Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="machine.css">
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css">
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Include Header -->
+    <div id="header-container"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('./Img/machinery-bg.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-blue-900/40"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10">
+            <div class="text-center z-10">
+                <div class="inline-block mb-4">
+                    <span class="bg-gradient-to-r from-gray-600 to-blue-600 text-white px-4 py-2 rounded-full text-xs sm:text-sm font-weight-semibold tracking-wide uppercase shadow-lg">
+                        State-of-the-Art Facilities
+                    </span>
+                </div>
+                
+                <h1 class="hero-headline text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                    Machines & <span class="text-gradient">Equipment</span>
+                </h1>
+                
+                <p class="hero-subheadline text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Comprehensive catalog of our advanced manufacturing machinery and equipment for precision sheet-metal fabrication
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machines Catalog Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Equipment <span class="text-gradient">Catalog</span>
+                </h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Complete inventory of our manufacturing machinery with detailed specifications
+                </p>
+            </div>
+
+            <!-- Machines Table -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Sr. No.</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Machine Name/Make</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Model/No.</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Capacity/Spec</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Location</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200" id="machines-table-body">
+                            <!-- Machines data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Critical Machines Details -->
+            <div class="mt-16">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+                    Critical <span class="text-gradient">Machinery</span>
+                </h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="critical-machines">
+                    <!-- Critical machines details will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Load Header and Footer using fetch -->
+    <script>
+        // Load Header
+        fetch('/Header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Load header JS after header is inserted
+                const headerScript = document.createElement('script');
+                headerScript.src = './Header/h.js';
+                document.body.appendChild(headerScript);
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load Footer
+        fetch('/Footer/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <script src="machine.js"></script>
+</body>
+</html>
