@@ -1,8 +1,11 @@
-
-
-// JavaScript for Carline Project Contact Page
+// JavaScript for Carline Auto Pvt. Ltd. Contact Page
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Wait for header to load before initializing
+    setTimeout(initializeContactPage, 500);
+});
+
+function initializeContactPage() {
     // Add animation classes to elements when they come into view
     const observerOptions = {
         threshold: 0.1,
@@ -17,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe sections for animation
+    // Observe sections for animation (excluding header)
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.classList.add('opacity-0');
@@ -102,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         callNowBtn.addEventListener('click', function() {
             alert('Calling +91 20 1234 5678');
             // In a real implementation, this would initiate a phone call
+            // window.location.href = 'tel:+912012345678';
         });
     }
 
@@ -111,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         emailUsBtn.addEventListener('click', function() {
             alert('Opening email client to send message to info@carlineproject.com');
             // In a real implementation, this would open the default email client
+            // window.location.href = 'mailto:info@carlineproject.com?subject=Inquiry%20from%20Website&body=Dear%20Carline%20Auto%20Pvt.%20Ltd.%2C%0A%0AI%20would%20like%20to%20inquire%20about...';
         });
     }
 
@@ -132,12 +137,16 @@ document.addEventListener('DOMContentLoaded', function() {
         messageEl.style.display = 'block';
         
         // Insert before the form
-        contactForm.parentNode.insertBefore(messageEl, contactForm);
-        
-        // Auto-remove after 5 seconds
-        setTimeout(() => {
-            messageEl.remove();
-        }, 5000);
+        if (contactForm) {
+            contactForm.parentNode.insertBefore(messageEl, contactForm);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (messageEl.parentNode) {
+                    messageEl.remove();
+                }
+            }, 5000);
+        }
     }
 
     // Add scroll to top functionality
@@ -164,5 +173,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('Carline Project Contact Page loaded successfully!');
-});
+    // Mark contact link as active in navigation
+    markActiveNavLink();
+    
+    console.log('Carline Auto Pvt. Ltd. Contact Page loaded successfully!');
+}
+
+function markActiveNavLink() {
+    // Wait for header to fully load
+    setTimeout(() => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === 'contact.html' || 
+                link.textContent.toLowerCase().includes('contact')) {
+                link.classList.add('active');
+            }
+        });
+    }, 1000);
+}

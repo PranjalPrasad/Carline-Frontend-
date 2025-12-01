@@ -1,6 +1,4 @@
-
-
-/* Custom styles for Carline Project Contact Page */
+/* Custom styles for Carline Auto Pvt. Ltd. Contact Page */
 
 /* Smooth scrolling for anchor links */
 html {
@@ -20,7 +18,7 @@ html {
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, #3b82f6, #1e40af);
+    background: linear-gradient(90deg, #62a9e8, #7cc5f2);
     border-radius: 2px;
 }
 
@@ -120,6 +118,14 @@ html {
     display: none;
 }
 
+/* Message styles for form */
+.form-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .section-header::after {
@@ -131,4 +137,39 @@ html {
         width: 40px;
         height: 40px;
     }
+    
+    .hero-section .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .text-xl {
+        font-size: 1.125rem;
+    }
+}
+
+/* Override for header active link */
+.nav-link.active {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+/* Ensure content starts below header */
+body {
+    padding-top: 0;
+}
+
+/* Fix for scroll to top button positioning */
+#scrollToTop {
+    z-index: 9999;
+}
+
+/* Contact hero section adjustments */
+.bg-blue-700 {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+/* FAQ section spacing */
+.faq-item:last-child {
+    margin-bottom: 0;
 }

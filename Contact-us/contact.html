@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Carline Project</title>
+    <title>Contact Us - Carline Auto Pvt. Ltd.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css">
 </head>
-<body>
+<body class="bg-gray-50">
+    
+    <!-- Include Header -->
+    <div id="header-container"></div>
+    
     <!-- Contact Hero Section -->
     <section class="bg-blue-700 text-white py-20">
         <div class="container mx-auto px-4 text-center">
             <div class="flex items-center justify-center mb-6">
                 <i class="fas fa-car text-4xl text-white mr-3"></i>
-                <h1 class="text-4xl font-bold">Carline Project</h1>
+                <h1 class="text-4xl font-bold">Carline Auto Pvt. Ltd.</h1>
             </div>
             <h2 class="text-5xl font-bold mb-6">Get In Touch</h2>
             <p class="text-xl max-w-2xl mx-auto">We're here to help you with all your automotive needs. Reach out to us for inquiries, support, or collaborations.</p>
@@ -197,8 +203,32 @@
         </div>
     </section>
 
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Header and Footer -->
+    <script>
+        // Load Header
+        fetch('/Header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Load header JS after header is inserted
+                const headerScript = document.createElement('script');
+                headerScript.src = '/Header/header.js';
+                document.body.appendChild(headerScript);
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load Footer
+        fetch('/Footer/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
     <script src="contact.js"></script>
 </body>
 </html>
-
-
