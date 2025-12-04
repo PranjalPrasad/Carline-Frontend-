@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Carline Auto Pvt. Ltd.</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="Contact.css">
     <!-- Header CSS -->
     <link rel="stylesheet" href="/Header/header.css">
 </head>
@@ -15,197 +14,288 @@
     <!-- Include Header -->
     <div id="header-container"></div>
     
-    <!-- Contact Hero Section -->
-    <section class="bg-blue-700 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex items-center justify-center mb-6">
-                <i class="fas fa-car text-4xl text-white mr-3"></i>
-                <h1 class="text-4xl font-bold">Carline Auto Pvt. Ltd.</h1>
+    <!-- Hero Section -->
+    <section class="hero-section relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/Img/company.jpeg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-blue-900/50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    Contact Us
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto">
+                    Get in touch with our team for any inquiries or quote requests
+                </p>
             </div>
-            <h2 class="text-5xl font-bold mb-6">Get In Touch</h2>
-            <p class="text-xl max-w-2xl mx-auto">We're here to help you with all your automotive needs. Reach out to us for inquiries, support, or collaborations.</p>
         </div>
     </section>
 
-    <!-- Contact Form & Info Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row gap-12">
-                <!-- Contact Form -->
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl font-bold mb-8 text-gray-800 section-header">Send Us a Message</h2>
-                    <form id="contactForm" class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="mb-6">
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your full name" required>
+    <!-- Contact Information Section -->
+    <section class="py-12 sm:py-16 bg-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+               <!-- Phone -->
+<div class="contact-info-card" style="background: linear-gradient(#2E4156);">
+    <div class="icon-wrapper">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">Phone</h3>
+    <p class="text-gray-300 mb-2">Pune Office</p>
+    <a href="tel:+912027421766" class="text-white hover:text-blue-400 transition-colors">+91 20 2742 1766</a>
+    <p class="text-gray-300 mt-3 mb-2">Satara Factory</p>
+    <a href="tel:+912162241250" class="text-white hover:text-blue-400 transition-colors">+91 2162 241 250</a>
+</div>
+
+<!-- Email -->
+<div class="contact-info-card" style="background: linear-gradient(#2E4156);">
+    <div class="icon-wrapper">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">Email</h3>
+    <p class="text-gray-300 mb-2">Sales Inquiries</p>
+    <a href="mailto:sales@carlineauto.com" class="text-white hover:text-blue-400 transition-colors block mb-2">sales@carlineauto.com</a>
+    <p class="text-gray-300 mb-2">General Inquiries</p>
+    <a href="mailto:info@carlineauto.com" class="text-white hover:text-blue-400 transition-colors block">info@carlineauto.com</a>
+</div>
+
+<!-- Address -->
+<div class="contact-info-card" style="background: linear-gradient(#2E4156);">
+    <div class="icon-wrapper">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">Address</h3>
+    <p class="text-gray-300 mb-2 font-semibold">Pune Office</p>
+    <p class="text-gray-200 text-sm leading-relaxed">Survey No. 123, Pune-Satara Road, Pune, Maharashtra 411037</p>
+    <p class="text-gray-300 mt-3 mb-2 font-semibold">Satara Factory</p>
+    <p class="text-gray-200 text-sm leading-relaxed">Gat No. 456, MIDC Satara, Maharashtra 415001</p>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Forms Section -->
+    <section class="py-12 sm:py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Post Your Enquiry Form -->
+                <div class="form-container">
+                    <h2 class="form-title">Post Your Enquiry</h2>
+                    <form id="enquiry-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="form-group">
+                                <label for="enquiry-firstname" class="form-label">First Name*</label>
+                                <input type="text" id="enquiry-firstname" name="firstname" required class="form-input" placeholder="First Name*">
+                            </div>
+                            <div class="form-group">
+                                <label for="enquiry-lastname" class="form-label">Last Name*</label>
+                                <input type="text" id="enquiry-lastname" name="lastname" required class="form-input" placeholder="Last Name*">
+                            </div>
                         </div>
                         
-                        <div class="mb-6">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email address" required>
+                        <div class="form-group">
+                            <label for="enquiry-phone" class="form-label">Phone No.*</label>
+                            <input type="tel" id="enquiry-phone" name="phone" required class="form-input" placeholder="Phone No.*">
                         </div>
                         
-                        <div class="mb-6">
-                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your phone number">
+                        <div class="form-group">
+                            <label for="enquiry-email" class="form-label">Email Address*</label>
+                            <input type="email" id="enquiry-email" name="email" required class="form-input" placeholder="Email Address*">
                         </div>
                         
-                        <div class="mb-6">
-                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="">Select a subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="product">Product Information</option>
-                                <option value="support">Technical Support</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                                <option value="career">Career Opportunity</option>
-                                <option value="other">Other</option>
+                        <div class="form-group">
+                            <label for="enquiry-message" class="form-label">Message</label>
+                            <textarea id="enquiry-message" name="message" rows="4" class="form-input" placeholder="Message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Request a Quote Form -->
+                <div class="form-container">
+                    <h2 class="form-title">Interested In Working With Us?</h2>
+                    <form id="quote-form" class="space-y-4">
+                        <div class="form-group">
+                            <label for="quote-name" class="form-label">Name*</label>
+                            <input type="text" id="quote-name" name="name" required class="form-input" placeholder="Name*">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote-company" class="form-label">Company</label>
+                            <input type="text" id="quote-company" name="company" class="form-input" placeholder="Company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote-phone" class="form-label">Phone No.*</label>
+                            <input type="tel" id="quote-phone" name="phone" required class="form-input" placeholder="Phone No.*">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote-email" class="form-label">Email Address*</label>
+                            <input type="email" id="quote-email" name="email" required class="form-input" placeholder="Email Address*">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote-product" class="form-label">Product of Interest</label>
+                            <select id="quote-product" name="product" class="form-input">
+                                <option value="">Select Product</option>
+                                <option value="air-filters">Air Filters</option>
+                                <option value="air-tanks">Air Tanks</option>
+                                <option value="oil-tanks">Oil Tanks</option>
+                                <option value="sheet-metal">Sheet-Metal Assemblies</option>
+                                <option value="custom">Custom Solution</option>
                             </select>
                         </div>
                         
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your message" required></textarea>
+                        <div class="form-group">
+                            <label for="quote-qty" class="form-label">Quantity/Specifications</label>
+                            <input type="text" id="quote-qty" name="quantity" class="form-input" placeholder="Quantity/Specifications">
                         </div>
                         
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
-                            Send Message
-                        </button>
+                        <div class="form-group">
+                            <label for="quote-file" class="form-label">Upload File</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="quote-file" name="file" class="file-input" accept=".pdf,.doc,.docx,.dwg,.dxf,.jpg,.png">
+                                <label for="quote-file" class="file-label">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                                    </svg>
+                                    <span class="file-name">No File Chosen</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote-message" class="form-label">Message</label>
+                            <textarea id="quote-message" name="message" rows="3" class="form-input" placeholder="Message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit</button>
                     </form>
                 </div>
-                
-                <!-- Contact Information -->
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl font-bold mb-8 text-gray-800 section-header">Contact Information</h2>
-                    
-                    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-                        <div class="flex items-start mb-6">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-gray-800">Our Address</h3>
-                                <p class="text-gray-700">123 Automotive Street<br>Industrial Area, Pune<br>Maharashtra, India 411038</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start mb-6">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-phone text-green-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-gray-800">Phone Numbers</h3>
-                                <p class="text-gray-700">+91 20 1234 5678<br>+91 98765 43210</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start mb-6">
-                            <div class="bg-purple-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-envelope text-purple-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-gray-800">Email Addresses</h3>
-                                <p class="text-gray-700">info@carlineproject.com<br>support@carlineproject.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-orange-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-clock text-orange-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-gray-800">Business Hours</h3>
-                                <p class="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Map Section -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-gray-800">Find Us on Map</h3>
-                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-map text-4xl text-gray-500 mb-3"></i>
-                                <p class="text-gray-600">Interactive Map Would Appear Here</p>
-                                <button id="viewMapBtn" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition">
-                                    View Larger Map
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 section-header">Frequently Asked Questions</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-50 rounded-lg p-6 mb-6 faq-item">
-                    <button class="faq-question w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-gray-800">What types of automotive components do you manufacture?</h3>
-                        <i class="fas fa-chevron-down text-blue-600"></i>
-                    </button>
-                    <div class="faq-answer mt-4 text-gray-700 hidden">
-                        <p>We specialize in precision-engineered automotive components including engine parts, transmission components, suspension systems, and custom fabricated parts for various vehicle types.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-lg p-6 mb-6 faq-item">
-                    <button class="faq-question w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-gray-800">Do you offer custom manufacturing solutions?</h3>
-                        <i class="fas fa-chevron-down text-blue-600"></i>
-                    </button>
-                    <div class="faq-answer mt-4 text-gray-700 hidden">
-                        <p>Yes, we provide custom manufacturing solutions tailored to your specific requirements. Our engineering team works closely with clients to develop and produce components that meet exact specifications.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-lg p-6 mb-6 faq-item">
-                    <button class="faq-question w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-gray-800">What is your typical lead time for orders?</h3>
-                        <i class="fas fa-chevron-down text-blue-600"></i>
-                    </button>
-                    <div class="faq-answer mt-4 text-gray-700 hidden">
-                        <p>Lead times vary depending on the complexity and quantity of the order. Standard components typically ship within 2-4 weeks, while custom projects may require 6-8 weeks. We provide precise timelines during the quotation process.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-50 rounded-lg p-6 mb-6 faq-item">
-                    <button class="faq-question w-full text-left flex justify-between items-center">
-                        <h3 class="text-xl font-semibold text-gray-800">Do you provide international shipping?</h3>
-                        <i class="fas fa-chevron-down text-blue-600"></i>
-                    </button>
-                    <div class="faq-answer mt-4 text-gray-700 hidden">
-                        <p>Yes, we ship our products worldwide. We work with reliable logistics partners to ensure timely and secure delivery to international clients. Shipping costs and timelines are provided with each quotation.</p>
-                    </div>
+    <!-- Regional Sales Section -->
+    <section class="py-12 sm:py-16 bg-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                    Regional <span class="text-gradient">Sales Contacts</span>
+                </h2>
+                <p class="text-lg text-gray-600">Connect with our sales team</p>
+            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Pune Office + Satara Factory Details -->
+    <div class="regional-card" style="background: linear-gradient(#2E4156);">
+        
+        <!-- Pune Office -->
+        <div class="flex items-start mb-8">
+            <div class="regional-icon">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+            </div>
+            <div class="ml-4 flex-1">
+                <h3 class="text-xl font-bold text-white mb-3">Pune Office</h3>
+                <div class="space-y-2 text-white">
+                    <p class="flex items-start">
+                        <svg class="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span class="text-sm">Survey No. 123, Pune-Satara Road, Pune, Maharashtra 411037</span>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <a href="tel:+912027421766" class="text-sm hover:text-blue-400 transition-colors">+91 20 2742 1766</a>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <a href="mailto:pune@carlineauto.com" class="text-sm hover:text-blue-400 transition-colors">pune@carlineauto.com</a>
+                    </p>
                 </div>
             </div>
+        </div>
+
+        <!-- Satara Factory -->
+        <div class="flex items-start">
+            <div class="regional-icon">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                </svg>
+            </div>
+            <div class="ml-4 flex-1">
+                <h3 class="text-xl font-bold text-white mb-3">Satara Factory</h3>
+                <div class="space-y-2 text-white">
+                    <p class="flex items-start">
+                        <svg class="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <span class="text-sm">Gat No. 456, MIDC Satara, Maharashtra 415001</span>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <a href="tel:+912162241250" class="text-sm hover:text-blue-400 transition-colors">+91 2162 241 250</a>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <a href="mailto:satara@carlineauto.com" class="text-sm hover:text-blue-400 transition-colors">satara@carlineauto.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map (Right Column) -->
+    <div class="regional-card" >
+        <div class="map-container" style="max-width: 600px; margin: 0 auto;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.4019607584634!2d73.8567437!3d18.5204303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0783c8c5c67%3A0x2e6c5e7d5e7d5e7d!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890" 
+                width="100%" 
+                height="350"                                  
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg shadow-lg">
+            </iframe>
+        </div> 
+    </div>
+
+</div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-blue-700 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Contact us today to discuss your automotive component needs and discover how we can help bring your vision to life.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button id="callNowBtn" class="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
-                    <i class="fas fa-phone mr-2"></i>Call Now
-                </button>
-                <button id="emailUsBtn" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
-                    <i class="fas fa-envelope mr-2"></i>Email Us
-                </button>
-            </div>
-        </div>
-    </section>
+    <!-- Map Section -->
+    
 
     <!-- Include Footer -->
     <div id="footer-container"></div>
-
+    
     <!-- Load Header and Footer -->
     <script>
         // Load Header
@@ -213,7 +303,6 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-container').innerHTML = data;
-                // Load header JS after header is inserted
                 const headerScript = document.createElement('script');
                 headerScript.src = '/Header/header.js';
                 document.body.appendChild(headerScript);
@@ -228,7 +317,7 @@
             })
             .catch(error => console.error('Error loading footer:', error));
     </script>
-
-    <script src="contact.js"></script>
+    
+    <script src="Contact.js"></script>
 </body>
 </html>

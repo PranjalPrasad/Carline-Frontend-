@@ -1,193 +1,209 @@
-// JavaScript for Carline Auto Pvt. Ltd. Contact Page
-
+// File upload handling
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait for header to load before initializing
-    setTimeout(initializeContactPage, 500);
-});
-
-function initializeContactPage() {
-    // Add animation classes to elements when they come into view
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
+    
+    // File upload display name
+    const fileInput = document.getElementById('quote-file');
+    const fileLabel = document.querySelector('.file-label .file-name');
+    
+    if (fileInput) {
+        fileInput.addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+                fileLabel.textContent = fileName;
+            } else {
+                fileLabel.textContent = 'No File Chosen';
             }
         });
-    }, observerOptions);
-
-    // Observe sections for animation (excluding header)
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.add('opacity-0');
-        observer.observe(section);
-    });
-
-    // Contact Form Handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+    }
+    
+    // Enquiry Form Submission
+    const enquiryForm = document.getElementById('enquiry-form');
+    if (enquiryForm) {
+        enquiryForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form data
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
+            const formData = {
+                firstname: document.getElementById('enquiry-firstname').value,
+                lastname: document.getElementById('enquiry-lastname').value,
+                phone: document.getElementById('enquiry-phone').value,
+                email: document.getElementById('enquiry-email').value,
+                message: document.getElementById('enquiry-message').value
+            };
             
-            // Simple validation
-            if (!name || !email || !message) {
-                showMessage('Please fill in all required fields.', 'error');
+            // Validate form
+            if (!validateEnquiryForm(formData)) {
                 return;
             }
             
-            if (!isValidEmail(email)) {
-                showMessage('Please enter a valid email address.', 'error');
-                return;
-            }
+            // Show success message
+            showMessage(enquiryForm, 'success', 'Thank you! Your enquiry has been submitted successfully. We will get back to you soon.');
             
-            // Simulate form submission
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
+            // Reset form
+            enquiryForm.reset();
             
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-            
-            // Simulate API call
-            setTimeout(() => {
-                showMessage('Thank you for your message! We will get back to you soon.', 'success');
-                contactForm.reset();
-                
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-            }, 2000);
+            // Here you would typically send the data to a server
+            console.log('Enquiry Form Data:', formData);
         });
     }
-
-    // FAQ Accordion Functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', function() {
-            // Close all other FAQ items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                    otherItem.querySelector('.faq-answer').classList.add('hidden');
-                }
-            });
-            
-            // Toggle current item
-            item.classList.toggle('active');
-            const answer = item.querySelector('.faq-answer');
-            answer.classList.toggle('hidden');
-        });
-    });
-
-    // View Larger Map Button
-    const viewMapBtn = document.getElementById('viewMapBtn');
-    if (viewMapBtn) {
-        viewMapBtn.addEventListener('click', function() {
-            alert('This would open a larger map or redirect to Google Maps with our location.');
-        });
-    }
-
-    // Call Now Button
-    const callNowBtn = document.getElementById('callNowBtn');
-    if (callNowBtn) {
-        callNowBtn.addEventListener('click', function() {
-            alert('Calling +91 20 1234 5678');
-            // In a real implementation, this would initiate a phone call
-            // window.location.href = 'tel:+912012345678';
-        });
-    }
-
-    // Email Us Button
-    const emailUsBtn = document.getElementById('emailUsBtn');
-    if (emailUsBtn) {
-        emailUsBtn.addEventListener('click', function() {
-            alert('Opening email client to send message to info@carlineproject.com');
-            // In a real implementation, this would open the default email client
-            // window.location.href = 'mailto:info@carlineproject.com?subject=Inquiry%20from%20Website&body=Dear%20Carline%20Auto%20Pvt.%20Ltd.%2C%0A%0AI%20would%20like%20to%20inquire%20about...';
-        });
-    }
-
-    // Helper Functions
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    function showMessage(text, type) {
-        // Remove any existing messages
-        const existingMessages = document.querySelectorAll('.form-message');
-        existingMessages.forEach(msg => msg.remove());
-        
-        // Create new message element
-        const messageEl = document.createElement('div');
-        messageEl.className = `form-message ${type}-message`;
-        messageEl.textContent = text;
-        messageEl.style.display = 'block';
-        
-        // Insert before the form
-        if (contactForm) {
-            contactForm.parentNode.insertBefore(messageEl, contactForm);
-            
-            // Auto-remove after 5 seconds
-            setTimeout(() => {
-                if (messageEl.parentNode) {
-                    messageEl.remove();
-                }
-            }, 5000);
-        }
-    }
-
-    // Add scroll to top functionality
-    const scrollToTop = document.createElement('button');
-    scrollToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollToTop.className = 'fixed bottom-5 right-5 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 z-50';
-    scrollToTop.id = 'scrollToTop';
-    document.body.appendChild(scrollToTop);
-
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollToTop.classList.remove('opacity-0');
-            scrollToTop.classList.add('opacity-100');
-        } else {
-            scrollToTop.classList.remove('opacity-100');
-            scrollToTop.classList.add('opacity-0');
-        }
-    });
-
-    scrollToTop.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Mark contact link as active in navigation
-    markActiveNavLink();
     
-    console.log('Carline Auto Pvt. Ltd. Contact Page loaded successfully!');
+    // Quote Form Submission
+    const quoteForm = document.getElementById('quote-form');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('quote-name').value,
+                company: document.getElementById('quote-company').value,
+                phone: document.getElementById('quote-phone').value,
+                email: document.getElementById('quote-email').value,
+                product: document.getElementById('quote-product').value,
+                quantity: document.getElementById('quote-qty').value,
+                message: document.getElementById('quote-message').value,
+                file: document.getElementById('quote-file').files[0]
+            };
+            
+            // Validate form
+            if (!validateQuoteForm(formData)) {
+                return;
+            }
+            
+            // Show success message
+            showMessage(quoteForm, 'success', 'Thank you! Your quote request has been submitted successfully. Our team will contact you shortly.');
+            
+            // Reset form
+            quoteForm.reset();
+            fileLabel.textContent = 'No File Chosen';
+            
+            // Here you would typically send the data to a server
+            console.log('Quote Form Data:', formData);
+        });
+    }
+});
+
+// Validation Functions
+function validateEnquiryForm(data) {
+    // Validate first name
+    if (!data.firstname.trim()) {
+        showMessage(document.getElementById('enquiry-form'), 'error', 'Please enter your first name.');
+        return false;
+    }
+    
+    // Validate last name
+    if (!data.lastname.trim()) {
+        showMessage(document.getElementById('enquiry-form'), 'error', 'Please enter your last name.');
+        return false;
+    }
+    
+    // Validate phone
+    if (!validatePhone(data.phone)) {
+        showMessage(document.getElementById('enquiry-form'), 'error', 'Please enter a valid phone number.');
+        return false;
+    }
+    
+    // Validate email
+    if (!validateEmail(data.email)) {
+        showMessage(document.getElementById('enquiry-form'), 'error', 'Please enter a valid email address.');
+        return false;
+    }
+    
+    return true;
 }
 
-function markActiveNavLink() {
-    // Wait for header to fully load
-    setTimeout(() => {
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === 'contact.html' || 
-                link.textContent.toLowerCase().includes('contact')) {
-                link.classList.add('active');
-            }
-        });
-    }, 1000);
+function validateQuoteForm(data) {
+    // Validate name
+    if (!data.name.trim()) {
+        showMessage(document.getElementById('quote-form'), 'error', 'Please enter your name.');
+        return false;
+    }
+    
+    // Validate phone
+    if (!validatePhone(data.phone)) {
+        showMessage(document.getElementById('quote-form'), 'error', 'Please enter a valid phone number.');
+        return false;
+    }
+    
+    // Validate email
+    if (!validateEmail(data.email)) {
+        showMessage(document.getElementById('quote-form'), 'error', 'Please enter a valid email address.');
+        return false;
+    }
+    
+    // Validate file size if file is uploaded
+    if (data.file) {
+        const maxSize = 10 * 1024 * 1024; // 10MB
+        if (data.file.size > maxSize) {
+            showMessage(document.getElementById('quote-form'), 'error', 'File size should not exceed 10MB.');
+            return false;
+        }
+    }
+    
+    return true;
 }
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function validatePhone(phone) {
+    const re = /^[\d\s\-\+\(\)]{10,}$/;
+    return re.test(phone.trim());
+}
+
+function showMessage(form, type, message) {
+    // Remove any existing messages
+    const existingMessage = form.querySelector('.success-message, .error-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = type === 'success' ? 'success-message' : 'error-message';
+    messageDiv.textContent = message;
+    
+    // Insert message at the top of the form
+    form.insertBefore(messageDiv, form.firstChild);
+    
+    // Scroll to message
+    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    
+    // Auto-remove success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            messageDiv.style.transition = 'opacity 0.5s';
+            messageDiv.style.opacity = '0';
+            setTimeout(() => messageDiv.remove(), 500);
+        }, 5000);
+    }
+}
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Add input animation on focus
+document.querySelectorAll('.form-input').forEach(input => {
+    input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+    });
+    
+    input.addEventListener('blur', function() {
+        if (!this.value) {
+            this.parentElement.classList.remove('focused');
+        }
+    });
+});

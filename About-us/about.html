@@ -3,146 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Carline Project</title>
+    <title>About Us - Carline Auto Pvt. Ltd.</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="about.css">
     <!-- Header CSS -->
     <link rel="stylesheet" href="/Header/header.css">
+    <!-- Footer CSS will be loaded dynamically -->
+    <link rel="stylesheet" href="/Footer/footer.html">
 </head>
-<body class="bg-gray-50">
+<body class="font-sans">
     
     <!-- Include Header -->
     <div id="header-container"></div>
-
-    <!-- About Company Section -->
-    <section id="about-company" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 section-header">About Our Company</h2>
-            <div class="flex flex-col lg:flex-row items-center">
-                <!-- Company Details -->
-                <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
-                    <h3 class="text-3xl font-bold mb-6 text-blue-700">Carline Auto Pvt. Ltd.</h3>
-                    <p class="text-gray-700 mb-4">Established in 1964 in Pune, India, Carline Auto stands as a beacon of engineering excellence and technological innovation in the automotive sector.</p>
-                    <p class="text-gray-700 mb-4">Founded by visionary leadership, our journey began with a modest 15 employees and a 5000 sq. feet workshop. Today, we take pride in our vibrant team of over 800 dedicated professionals, operating across nine factories.</p>
-                    <p class="text-gray-700 mb-6">Spanning nine state-of-the-art manufacturing facilities across Pune, we leverage a massive 400,000 sq. feet of manufacturing space to deliver unparalleled quality. Our portfolio encompasses automotive components, precision engineering, and innovative automotive solutions.</p>
-                    
-                    <div class="bg-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
-                        <h4 class="text-xl font-bold mb-2 text-blue-800">Our Mission</h4>
-                        <p class="text-gray-700">To deliver exceptional automotive solutions through innovation, quality, and customer-centric approaches.</p>
-                    </div>
-                </div>
-                
-                <!-- Company Images -->
-                <div class="lg:w-1/2">
-                    <div class="rounded-lg overflow-hidden shadow-xl h-96 w-full flex items-center justify-center bg-white p-4">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Carline Auto Pvt. Ltd." 
-                             class="w-full h-full object-cover image-hover">
-                    </div>
-                    <p class="text-center mt-4 text-gray-600 italic">Carline Auto Pvt. Ltd. - Driving Automotive Excellence Since 1964</p>
-                </div>
-            </div>
+    
+    <!-- Hero Section -->
+    <section class="relative py-40 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/Img/s.jpg'); animation: kenburns 20s ease-in-out infinite alternate;"></div>
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto px-6 relative z-10" style="text-align:center;">
+            <h1 class="text-white text-5xl font-bold">About Us</h1>
         </div>
     </section>
 
-    <!-- Owner Section -->
-    <section id="owner" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 section-header">Our Visionary Founder</h2>
-            <div class="flex flex-col lg:flex-row items-center">
-                <!-- Owner Image -->
-                <div class="lg:w-1/2 mb-10 lg:mb-0 flex justify-center">
-                    <div class="rounded-lg overflow-hidden shadow-xl h-96 w-full max-w-md">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                             alt="Founder" 
-                             class="w-full h-full object-cover image-hover founder-image">
-                    </div>
-                </div>
-                
-                <!-- Owner Details -->
-                <div class="lg:w-1/2 lg:pl-12">
-                    <h3 class="text-3xl font-bold mb-6 text-blue-700">The Founder</h3>
-                    <div class="mb-8">
-                        <h4 class="text-xl font-bold mb-2 text-gray-800">Mr. Visionary Leader</h4>
-                        <p class="text-gray-700 mb-4">A visionary leader with a passion for automotive excellence, our founder laid the foundation of Carline Auto with a clear focus on quality and innovation.</p>
-                        <p class="text-gray-700 mb-4">His strategic thinking and commitment to customer satisfaction have been instrumental in the company's growth over the decades.</p>
-                        <p class="text-gray-700">With expertise in automotive manufacturing processes and operations, our founder brought operational excellence to the organization, ensuring that Carline Auto maintains the highest standards in all its deliverables.</p>
-                    </div>
-                    
-                    <div class="bg-yellow-100 p-6 rounded-lg border-l-4 border-yellow-500">
-                        <h4 class="text-xl font-bold mb-2 text-yellow-800">Our Legacy</h4>
-                        <p class="text-gray-700">Under visionary leadership, Carline Auto has built a legacy of trust, quality, and innovation that continues to drive our company forward in the automotive industry.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <style>
+    @keyframes kenburns {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.1); }
+    }
+    </style>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 section-header">Our Certifications</h2>
-            <p class="text-center text-gray-700 max-w-3xl mx-auto mb-12">We are proud to hold multiple certifications that demonstrate our commitment to quality, safety, and environmental responsibility. These certifications validate our processes and ensure we meet the highest industry standards.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Certification 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 cert-card">
-                    <div class="h-48 bg-blue-600 flex items-center justify-center">
-                        <i class="fas fa-award text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">ISO 9001:2015</h3>
-                        <p class="text-gray-700 mb-4">Quality Management System certification ensuring consistent quality in all our processes and products.</p>
-                        <div class="flex items-center text-blue-600">
-                            <span class="mr-2">Valid until: 2025</span>
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
+    <!-- Welcome Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h1 class="text-5xl font-bold text-gray-800 mb-6">Welcome To Carline Auto Pvt. Ltd </h1>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-lg">
+                        Carline Auto Private Limited (CAPL) was incorporated in 1989. The Chairman and Managing Director of CAPL, Late Shri. Ashok Sawant, a Technocrat, successful for 30 years in supplying key Sheet metal Components and subassemblies to M/s Tata Motors Ltd, Mahindra & Mahindra Ltd., Matsushita, Hatz Germany. The company has earned plaudits for developing proprietary sheet metal components such as Air Filters (required for Telco 407 vehicles & Exports), Air Cylinders (for Hydraulic brake System), Air Tanks, Sensing Tanks, Deep drawn components such as Shell Fuel Filter, Lubricating Oil Filter.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-lg">
+                        The Chairman and Managing Director of the company is Late Mr. Ashok J. Sawant, a Technocrat with extensive experience in Automobile Industry. Mr. Sawant was earlier associated with M/s Telco for more than a decade and was working in Production Engineering Division when he left Telco to start Carline Pressings Private Limited. With a dedicated workforce of 35 employees, 4 supervisors in production, and 5 office staff members, we ensure quality and efficiency in every project we undertake.
+                    </p>
+                    <p class="text-gray-700 font-semibold mb-4 text-lg">Our Valued Customers (Domestic):</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-gray-700 mr-2 text-lg">●</span>
+                            <span class="text-gray-600 text-lg">M/S. Tata Motors Ltd.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gray-700 mr-2 text-lg">●</span>
+                            <span class="text-gray-600 text-lg">M/s. Tata Motors Ltd, Spare Parts Division</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gray-700 mr-2 text-lg">●</span>
+                            <span class="text-gray-600 text-lg">M/s. Ring Plus Aqua Ltd.</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <!-- Certification 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 cert-card">
-                    <div class="h-48 bg-green-600 flex items-center justify-center">
-                        <i class="fas fa-leaf text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">ISO 14001:2015</h3>
-                        <p class="text-gray-700 mb-4">Environmental Management System certification demonstrating our commitment to sustainable practices.</p>
-                        <div class="flex items-center text-green-600">
-                            <span class="mr-2">Valid until: 2025</span>
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Certification 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 cert-card">
-                    <div class="h-48 bg-red-600 flex items-center justify-center">
-                        <i class="fas fa-shield-alt text-white text-6xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-gray-800">IATF 16949:2016</h3>
-                        <p class="text-gray-700 mb-4">Automotive Quality Management System certification specific to the automotive industry.</p>
-                        <div class="flex items-center text-red-600">
-                            <span class="mr-2">Valid until: 2025</span>
-                            <i class="fas fa-check-circle"></i>
-                        </div>
+               <div class="relative max-w-2xl">
+                    <img src="/Img/company.jpeg" alt="Carline Building" class="w-full rounded-lg shadow-lg" style="max-height: 350px; object-fit: cover;">
+                    <div class="absolute bg-gray-600 text-white shadow-xl flex flex-col justify-center" style="width: 30%; height: 50%; padding: 1.5rem; bottom: 0; left: -5%; bottom:-12%;background: linear-gradient(rgba(75, 75, 75, 0.90), rgba(0,0,0,0.90));">     
+                        <P class="text-2xl font-bold leading-tight mb-1">Established</P>
+                        <p class="text-2xl font-bold leading-tight mb-1">And Flourishing</p>
+                        <p class="text-2xl font-bold leading-tight">Since 1989</p>
                     </div>
                 </div>
             </div>
             
-            <div class="mt-12 text-center">
-                <button id="viewAllCertifications" class="btn-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300">
-                    View All Certifications
-                </button>
+            <div class="mt-8">
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <li class="flex items-start">
+                        <span class="text-gray-700 mr-2 text-lg">●</span>
+                        <span class="text-gray-600 text-lg">M/s. Mahindra & Mahindra Limited, Farm Equipment Sector, Kandivali, Mumbai</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-gray-700 mr-2 text-lg">●</span>
+                        <span class="text-gray-600 text-lg">M/s Knorr Bremse Pvt. Ltd.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-gray-700 mr-2 text-lg">●</span>
+                        <span class="text-gray-600 text-lg">M/s S.V. Robotics</span>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="text-gray-600 mt-8 leading-relaxed text-lg">
+                Our export customers include M/s Lombardini S.r.l. Italy and M/s Motorenifab Hatz GMBH & KG CO. We are supported by Bank Of India, Rasta Peth Branch, Pune, and our auditors M/s. B. L. Phatak & Co., Chartered Accountants, Erandwane, Pune. Our commitment to quality and innovation continues to drive our success in the automotive industry.
+            </p>
+        </div>
+    </section>
+
+ <!-- Vision and Mission Section -->
+    <section class="py-10 relative" style="background: linear-gradient(rgba(75, 75, 75, 0.7), rgba(0,0,0,0.7)), url('/Img/weld.avif'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Company Core Vision Card – now with demm.jpeg background -->
+            <div class="p-8 rounded-lg shadow-lg 
+                        bg-cover bg-center 
+                        text-white 
+                        relative 
+                        overflow-hidden"
+                 style="background-image: url('/Img/demm.jpeg');">
+                <!-- Dark overlay so text remains readable -->
+                <div class="absolute inset-0 bg-black opacity-60"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-6">Company Core Vision</h2>
+                    <p class="leading-relaxed text-base">
+                        The vision of Carline Auto Pvt. Ltd. is to ascend as a paramount name in the precision sheet metal and assembly manufacturing sector, both in India and internationally, renowned for our technological innovation, unparalleled quality, and sustainable practices. We aspire to shape the future of manufacturing through our advanced facilities and exceptional team, our commitment to environmental and social responsibility. We see a future where our company plays a pivotal role in the major industries we serve, driving progress and setting new standards in engineering and manufacturing, while continually positively contributing to the economy and society at large.
+                    </p>
+                    <br>
+                    <p class="leading-relaxed text-base">
+                        The company's vision is to become a leader in precision sheet metal manufacturing, setting new standards in innovation, quality, and sustainability, while positively impacting our industry and society. We aim to maintain our strong relationships with our valued customers and continue to expand our reach in both domestic and international markets.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Our Mission Card – now with demm.jpeg background -->
+            <div class="p-8 rounded-lg shadow-lg 
+                        bg-cover bg-center 
+                        text-white 
+                        relative 
+                        overflow-hidden"
+                 style="background-image: url('/Img/demm.jpeg');">
+                <!-- Dark overlay so text remains readable -->
+                <div class="absolute inset-0 bg-black opacity-60"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
+                    <p class="leading-relaxed text-base">
+                        Our mission at Carline Auto Pvt. Ltd. is to empower the industries we serve with exceptional engineering solutions and manufacturing excellence, propelled by our producing high-quality precision parts and assemblies, ensuring that every product we create meets the highest standards of quality and durability. At the heart of our operations is a commitment to innovation and sustainability. We strive to innovate within our field, maintaining an unwavering commitment to excellence, safety, and sustainability. We are not just engineering components, we are engineering a better future for all our stakeholders.
+                    </p>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Leadership Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-gray-800 mb-12" style="text-align: center;">Our Leadership</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <!-- Leader 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:flex-row">
+                <div class="md:w-1/2 bg-gray-200 flex items-center justify-center min-h-[200px]">
+                    <img src="/Img/demo1.png" alt="Late Shri Ashok J. Sawant" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-4 flex flex-col justify-center">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Late Shri Ashok J. Sawant</h3>
+                    <p class="text-red-600 font-semibold text-sm">Chairman And Managing Director</p>
+                </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:flex-row">
+                <div class="md:w-1/2 bg-gray-200 flex items-center justify-center min-h-[200px]">
+                    <img src="/Img/demo2.png" alt="Shri Dilip V. Mehendale" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-4 flex flex-col justify-center">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Shri Dilip V. Mehendale</h3>
+                    <p class="text-red-600 font-semibold text-sm">Director</p>
+                </div>
+            </div>
+
+            <!-- Leader 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:flex-row">
+                <div class="md:w-1/2 bg-gray-200 flex items-center justify-center min-h-[200px]">
+                    <img src="/Img/demo3.png" alt="Shri Vishwas S. Kulkarni" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-4 flex flex-col justify-center">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Shri Vishwas S. Kulkarni</h3>
+                    <p class="text-red-600 font-semibold text-sm">Director</p>
+                </div>
+            </div>
+
+            <!-- Leader 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col md:flex-row">
+                <div class="md:w-1/2 bg-gray-200 flex items-center justify-center min-h-[200px]">
+                    <img src="/Img/demo4.png" alt="Shri Siddharth A. Sawant" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-4 flex flex-col justify-center">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Shri Siddharth A. Sawant</h3>
+                    <p class="text-red-600 font-semibold text-sm">Director</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- What We Have To Offer Section -->
+    <section class="py-16 bg-gray-600 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">What We Have To Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-gray-700 p-6 rounded-lg hover:bg-gray-500 transition-colors">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-gray-600 p-3 rounded-lg mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Well Equipped Facility</h3>
+                            <p class="text-gray-300 text-sm">With our advanced modern facilities, we utilize state-of-the-art manufacturing equipment to ensure precision and quality in every component we produce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition-colors">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-gray-600 p-3 rounded-lg mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Wide Range Of Products Development</h3>
+                            <p class="text-gray-300 text-sm">Our diverse product portfolio includes Air Filters, Air Cylinders, Air Tanks, Sensing Tanks, and Deep drawn components such as Shell Fuel Filter and Lubricating Oil Filter.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition-colors">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-gray-600 p-3 rounded-lg mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Quality Practice</h3>
+                            <p class="text-gray-300 text-sm">Certified with TS/ISO 9001:2008, we establish the highest quality standards and maintain excellence in all our operations and manufacturing processes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition-colors">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-gray-600 p-3 rounded-lg mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Dedicated Team</h3>
+                            <p class="text-gray-300 text-sm">Our team of 35 dedicated employees, 4 production supervisors, and 5 office staff members work together to deliver excellence in every project.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition-colors">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-gray-600 p-3 rounded-lg mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Global Reach</h3>
+                            <p class="text-gray-300 text-sm">With exports to Italy and Germany, we have established a strong international presence while maintaining our commitment to quality and customer satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition-colors">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-gray-600 p-3 rounded-lg mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Trusted Partnerships</h3>
+                            <p class="text-gray-300 text-sm">We maintain strong relationships with industry leaders like Tata Motors, Mahindra & Mahindra, and other valued customers across domestic and international markets.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Include Footer -->
     <div id="footer-container"></div>
-
+    
+    <!-- Load Header and Footer using fetch -->
     <script>
         // Load Header
         fetch('/Header/header.html')
@@ -164,7 +315,7 @@
             })
             .catch(error => console.error('Error loading footer:', error));
     </script>
-
+    
     <script src="about.js"></script>
 </body>
 </html>
