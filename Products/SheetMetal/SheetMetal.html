@@ -13,44 +13,18 @@
     
     <!-- Include Header -->
     <div id="header-container"></div>
-    
-    <!-- Breadcrumb -->
-    <!-- <section class="bg-white py-4 border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                    <li class="inline-flex items-center">
-                        <a href="/index.html" class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">
-                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-                            </svg>
-                            Home
-                        </a>
-                    </li> -->
-                    <!-- <li>
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <a href="products.html" class="ml-1 text-sm font-medium text-gray-500 hover:text-gray-700 md:ml-2">Products</a>
-                        </div>
-                    </li> -->
-                    <!-- <li aria-current="page">
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2">Sheet Metal Assemblies</span>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
-        </div>
-    </section> -->
-    
+   
     <!-- Hero Section -->
-    <section class="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
+    <section class="relative py-24 sm:py-24 lg:py-24 text-white overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="/Img/sheetmetals.jpg" 
+             alt="Sheet Metal Workshop" 
+             class="w-full h-full object-cover">
+    </div>
+
+    <!-- Dark Transparent Overlay (keeps text readable) -->
+    <div class="absolute inset-0 z-10 bg-black opacity-60"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Sheet Metal Assemblies</h1>
@@ -62,7 +36,7 @@
     </section>
     
     <!-- Products Overview -->
-    <section class="py-12 sm:py-16 bg-white">
+    <section class="py-12 sm:py-16 bg-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -75,334 +49,114 @@
             
             <!-- Product Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Product 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <span class="text-gray-500">Product Image</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Electrical Enclosures</h3>
-                        <p class="text-gray-600 mb-4">Custom-designed electrical enclosures with precise cutouts and mounting options.</p>
-                        <a href="#electrical-enclosures" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <span class="text-gray-500">Product Image</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Machine Guards & Covers</h3>
-                        <p class="text-gray-600 mb-4">Protective guards and covers for industrial machinery with safety compliance.</p>
-                        <a href="#machine-guards" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <span class="text-gray-500">Product Image</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ventilation Ducts</h3>
-                        <p class="text-gray-600 mb-4">Custom ventilation and exhaust ducts for industrial applications.</p>
-                        <a href="#ventilation-ducts" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <span class="text-gray-500">Product Image</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Control Panels</h3>
-                        <p class="text-gray-600 mb-4">Industrial control panels with precise component mounting and wiring access.</p>
-                        <a href="#control-panels" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Product 5 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <span class="text-gray-500">Product Image</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Chassis & Frames</h3>
-                        <p class="text-gray-600 mb-4">Structural chassis and frames for equipment and machinery.</p>
-                        <a href="#chassis-frames" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Product 6 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <span class="text-gray-500">Product Image</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Fabrications</h3>
-                        <p class="text-gray-600 mb-4">Bespoke sheet metal fabrications as per customer specifications.</p>
-                        <a href="#custom-fabrications" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+              <!-- 1. Electrical Enclosures -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+        <div class="h-48 bg-gray-200">
+            <img src="https://ik.imagekit.io/demo/electrical-enclosure.jpg" alt="Electrical Enclosures" class="w-full h-full object-cover">
         </div>
-    </section>
-    
-    <!-- Detailed Product Sections -->
-    <section class="py-12 sm:py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Product 1 Details -->
-            <div id="electrical-enclosures" class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <div class="p-6 lg:p-8">
-                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Electrical Enclosures</h2>
-                        <p class="text-gray-600 mb-6">
-                            Our electrical enclosures are precision-engineered to provide secure housing for electrical components, ensuring protection from environmental factors and electromagnetic interference.
-                        </p>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Technical Specifications</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Material Thickness: 1.2mm to 3.0mm</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>IP Rating: IP54 to IP66</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Standard Sizes: 300x200x150mm to 1200x800x400mm</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Surface Finish: Powder Coating, Galvanization</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Available Materials</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Mild Steel</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">SS 304</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">SS 316</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Aluminum</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Typical Applications</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Industrial Control Systems</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Power Distribution Panels</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Automation Control Cabinets</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Telecommunication Equipment</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                                Download Datasheet
-                            </a>
-                            <a href="request-quote.html" class="inline-flex items-center justify-center px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors duration-300">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                                </svg>
-                                Request Quote
-                            </a>
-                        </div>
+        <div class="p-6 bg-[#0f172a]">
+            <h3 class="text-xl font-bold text-gray-900 mb-2" style="color:white">Electrical Enclosures</h3>
+            <p class="text-gray-600 mb-4" style="color:white">Custom-designed electrical enclosures with precise cutouts and mounting options.</p>
+            <a href="/Facilities&Capabilities/Totalroom/total.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                View Details
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+                
+                <!-- Product 2 - Machine Guards & Covers -->
+                <div class="bg-[#0f172a] rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&h=400&fit=crop" alt="Machine Guards & Covers" class="w-full h-full object-cover">
                     </div>
-                    <div class="bg-gray-100 flex items-center justify-center p-8">
-                        <div class="text-center">
-                            <div class="h-64 w-full bg-gray-300 rounded-lg flex items-center justify-center mb-4">
-                                <span class="text-gray-500">Product Image</span>
-                            </div>
-                            <p class="text-gray-600">Electrical Enclosure Sample</p>
-                        </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2" style="color:white">Machine Guards & Covers</h3>
+                        <p class="text-gray-600 mb-4" style="color:white">Protective guards and covers for industrial machinery with safety compliance.</p>
+                        <a href="/Facilities&Capabilities/Totalroom/total.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            View Details
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 - Ventilation Ducts -->
+                <div class="bg-[#0f172a]  rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=400&fit=crop" alt="Ventilation Ducts" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2" style="color:white">Ventilation Ducts</h3>
+                        <p class="text-gray-600 mb-4" style="color:white">Custom ventilation and exhaust ducts for industrial applications.</p>
+                        <a href="/Facilities&Capabilities/Totalroom/total.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            View Details
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Product 4 - Control Panels (REAL & VISIBLE) -->
+<div class="bg-[#0f172a] rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+    <div class="h-48 bg-gray-200">
+        <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&w=1200&h=600&q=80" 
+             alt="Industrial Control Panel" 
+             class="w-full h-full object-cover">
+    </div>
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2" style="color:white">Control Panels</h3>
+        <p class="text-gray-600 mb-4" style="color:white">Industrial control panels with precise component mounting and wiring access.</p>
+        <a href="/Facilities&Capabilities/Totalroom/total.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+            View Details
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </a>
+    </div>
+</div>
+                
+                <!-- Product 5 - Chassis & Frames -->
+                <div class="bg-[#0f172a] rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&h=400&fit=crop" alt="Chassis & Frames" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2" style="color:white">Chassis & Frames</h3>
+                        <p class="text-gray-600 mb-4" style="color:white">Structural chassis and frames for equipment and machinery.</p>
+                        <a href="/Facilities&Capabilities/Totalroom/total.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            View Details
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 6 - Custom Fabrications -->
+                <div class="bg-[#0f172a] rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" alt="Custom Sheet Metal Fabrication" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2" style="color:white">Custom Fabrications</h3>
+                        <p class="text-gray-600 mb-4" style="color:white">Bespoke sheet metal fabrications as per customer specifications.</p>
+                        <a href="/Facilities&Capabilities/Totalroom/total.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                            View Details
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Product 2 Details -->
-            <div id="machine-guards" class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
-                    <div class="p-6 lg:p-8">
-                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Machine Guards & Covers</h2>
-                        <p class="text-gray-600 mb-6">
-                            Our machine guards and covers are designed to provide maximum safety for operators while allowing easy access for maintenance. We fabricate custom guards that meet industry safety standards.
-                        </p>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Technical Specifications</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Material Thickness: 1.5mm to 4.0mm</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Visibility Options: Transparent polycarbonate windows</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Mounting: Hinged, removable, or sliding options</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Safety Features: Interlock switches, warning labels</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Available Materials</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Mild Steel</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">SS 304</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Aluminum</span>
-                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Perforated Sheet</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Typical Applications</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>CNC Machine Protection</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Conveyor System Guards</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Press Machine Safety Covers</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Robot Work Cell Enclosures</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                                Download Datasheet
-                            </a>
-                            <a href="request-quote.html" class="inline-flex items-center justify-center px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-900 transition-colors duration-300">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                                </svg>
-                                Request Quote
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bg-gray-100 flex items-center justify-center p-8">
-                        <div class="text-center">
-                            <div class="h-64 w-full bg-gray-300 rounded-lg flex items-center justify-center mb-4">
-                                <span class="text-gray-500">Product Image</span>
-                            </div>
-                            <p class="text-gray-600">Machine Guard Sample</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional products would follow the same pattern -->
-            <!-- For brevity, I've included only two detailed product sections -->
-            
         </div>
     </section>
     
     <!-- CTA Section -->
-    <section class="py-12 sm:py-16 bg-blue-600 text-white">
+    <section class="py-12 sm:py-16 bg-[#0f172a] text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Need Custom Sheet Metal Solutions?</h2>
             <p class="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">

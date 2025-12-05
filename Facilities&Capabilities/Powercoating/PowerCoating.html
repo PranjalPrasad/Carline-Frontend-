@@ -14,23 +14,56 @@
     <!-- Include Header -->
     <div id="header-container"></div>
     
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 py-16 sm:py-20 lg:py-24">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center">
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                    Powder Coating & Phosphating
+   <!-- Hero Section -->
+    <section class="fabrication-hero relative overflow-hidden">
+    <!-- Background Video -->
+    <video 
+        class="absolute inset-0 w-full h-full object-cover -z-10" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        poster="/Img/Video/welding-poster.jpg">
+        <source src="/Img/Video/welding.mp4" type="video/mp4">
+        <!-- Fallback if video fails -->
+        <img src="/Img/Video/welding-poster.jpg" alt="Welding & Fabrication" class="w-full h-full object-cover">
+    </video>
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-blue-900/40"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10">
+            <div class="text-center text-white">
+               
+                
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+                     Powder Coating & <span class="text-gradient">Phosphating</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
+                
+                <p class="text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
                     High-quality surface finishing solutions for enhanced durability and aesthetic appeal
                 </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    
+                    <a href="/Contact-Us/Contact.html" class="cta-button cta-secondary inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-800 border-2 border-gray-300 rounded-lg font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:border-gray-400">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Request Quote</span>
+                    </a>
+                </div>
             </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block z-10">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
         </div>
     </section>
 
     <!-- Product Overview -->
-    <section class="py-12 sm:py-16 bg-white">
+    <section class="py-12 sm:py-16 bg-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -61,8 +94,11 @@
                     </div>
                 </div>
                 
-                <div class="bg-gray-200 h-80 rounded-lg flex items-center justify-center">
-                    <span class="text-gray-500">Powder Coating Facility Image</span>
+                <div class="h-80 rounded-lg flex items-center justify-center">
+                    <img 
+                        src="/Img/pc.jpg" 
+                        alt="Powder Coating Facility" 
+                        class="w-full h-full object-cover rounded-lg">
                 </div>
             </div>
         </div>
@@ -122,310 +158,89 @@
     </section>
 
     <!-- Available Materials -->
-    <section class="py-12 sm:py-16 bg-white">
+    <section class="py-12 sm:py-16 relative overflow-hidden">
+    <!-- Background Image -->
+    <div 
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10 opacity-70" 
+        style="background-image: url('/Img/power\ coating.jpg');">
+    </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">Available Materials</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-500 mb-8 text-center">Available Materials</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Stainless Steel 304</h3>
-                    <p class="text-gray-600 mb-4">Excellent corrosion resistance and durability for demanding applications.</p>
+                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200" style="color:white">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2" style="color:white">Stainless Steel 304</h3>
+                    <p class="text-gray-600 mb-4" style="color:white">Excellent corrosion resistance and durability for demanding applications.</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>High corrosion resistance</span>
+                        <span style="color:white">High corrosion resistance</span>
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Mild Steel</h3>
-                    <p class="text-gray-600 mb-4">Cost-effective solution with good mechanical properties and surface finish.</p>
+                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200" style="color:white">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2" style="color:white">Mild Steel</h3>
+                    <p class="text-gray-600 mb-4" style="color:white">Cost-effective solution with good mechanical properties and surface finish.</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Cost-effective</span>
+                        <span style="color:white">Cost-effective</span>
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Aluminum</h3>
-                    <p class="text-gray-600 mb-4">Lightweight material with excellent corrosion resistance and thermal conductivity.</p>
+                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200" style="color:white">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2" style="color:white">Aluminum</h3>
+                    <p class="text-gray-600 mb-4" style="color:white">Lightweight material with excellent corrosion resistance and thermal conductivity.</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Lightweight & corrosion resistant</span>
+                        <span style="color:white">Lightweight & corrosion resistant</span>
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Galvanized Steel</h3>
-                    <p class="text-gray-600 mb-4">Zinc-coated steel offering enhanced corrosion protection.</p>
+                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2" style="color:white">Galvanized Steel</h3>
+                    <p class="text-gray-600 mb-4" style="color:white">Zinc-coated steel offering enhanced corrosion protection.</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Enhanced corrosion protection</span>
+                        <span style="color:white">Enhanced corrosion protection</span>
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Brass</h3>
-                    <p class="text-gray-600 mb-4">Decorative applications with good machinability and corrosion resistance.</p>
+                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2" style="color:white">Brass</h3>
+                    <p class="text-gray-600 mb-4" style="color:white">Decorative applications with good machinability and corrosion resistance.</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Decorative applications</span>
+                        <span style="color:white">Decorative applications</span>
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Copper</h3>
-                    <p class="text-gray-600 mb-4">Excellent electrical and thermal conductivity with antimicrobial properties.</p>
+                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2" style="color:white">Copper</h3>
+                    <p class="text-gray-600 mb-4" style="color:white">Excellent electrical and thermal conductivity with antimicrobial properties.</p>
                     <div class="flex items-center text-sm text-gray-500">
                         <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Excellent conductivity</span>
+                        <span style="color:white">Excellent conductivity</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Typical Applications -->
-    <section class="py-12 sm:py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">Typical Applications</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                        Automotive Components
-                    </h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Engine brackets and mounts</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Chassis components</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Wheel rims</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Exhaust system components</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                        Industrial Equipment
-                    </h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Machine enclosures and guards</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Material handling equipment</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Structural frames and supports</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Control panels and cabinets</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                        Consumer Products
-                    </h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Appliance housings</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Outdoor furniture</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Bicycle frames</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Lighting fixtures</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                        Architectural Applications
-                    </h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Window and door frames</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Building facades</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Railings and balustrades</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Signage and displays</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
-    <!-- Download & Enquiry Section -->
-    <section class="py-12 sm:py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Download Datasheet -->
-                <div class="bg-gray-50 p-8 rounded-xl">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Download Datasheet</h2>
-                    <p class="text-gray-600 mb-6">
-                        Get detailed technical specifications, material options, and application guidelines for our powder coating services.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                            <svg class="w-8 h-8 text-red-500 mr-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
-                            </svg>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">Powder Coating Technical Datasheet</h3>
-                                <p class="text-sm text-gray-500">PDF, 2.4 MB</p>
-                            </div>
-                            <a href="#" class="ml-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                Download
-                            </a>
-                        </div>
-                        
-                        <div class="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                            <svg class="w-8 h-8 text-red-500 mr-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
-                            </svg>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">Color Chart & Finishes</h3>
-                                <p class="text-sm text-gray-500">PDF, 1.8 MB</p>
-                            </div>
-                            <a href="#" class="ml-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                Download
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Enquiry Form -->
-                <div class="bg-gray-900 p-8 rounded-xl text-white">
-                    <h2 class="text-2xl font-bold mb-4">Request a Quote</h2>
-                    <p class="text-gray-300 mb-6">
-                        Interested in our powder coating services? Provide your details and requirements, and our team will get back to you with a customized quote.
-                    </p>
-                    
-                    <form class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        
-                        <div>
-                            <label for="company" class="block text-sm font-medium text-gray-300 mb-1">Company</label>
-                            <input type="text" id="company" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-1">Phone</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        
-                        <div>
-                            <label for="requirements" class="block text-sm font-medium text-gray-300 mb-1">Project Requirements</label>
-                            <textarea id="requirements" rows="4" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                            Submit Enquiry
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Include Footer -->
     <div id="footer-container"></div>
     

@@ -9,7 +9,7 @@ const machinesData = [
         capacity: "300 Ton",
         specifications: "Programmable, CNC Controlled",
         location: "Press Shop - Bay 1",
-        image: "./Img/machines/hydraulic-press.jpg",
+        image: "https://images.unsplash.com/photo-1581092588576-12e700c0c9b8?w=800&h=600&fit=crop",
         isCritical: true,
         description: "High-capacity 300-ton hydraulic press for heavy-duty metal forming and stamping operations. Features programmable controls and precision pressure management."
     },
@@ -22,7 +22,7 @@ const machinesData = [
         capacity: "250 kg",
         specifications: "4-Station Rotary, MIG/TIG",
         location: "Welding Section - Bay 3",
-        image: "./Img/machines/welding-spm.jpg",
+        image: "https://images.pexels.com/photos/5691632/pexels-photo-5691632.jpeg?w=800&h=600&fit=crop",
         isCritical: true,
         description: "Special Purpose Machine with 4-station rotary table for high-volume welding operations. Capable of both MIG and TIG welding processes."
     },
@@ -35,7 +35,7 @@ const machinesData = [
         capacity: "1200x800x600 mm",
         specifications: "Automatic Spray, Curing Oven",
         location: "Finishing Section - Bay 5",
-        image: "./Img/machines/powder-coating.jpg",
+        image: "https://images.pexels.com/photos/4144773/pexels-photo-4144773.jpeg?w=800&h=600&fit=crop",
         isCritical: true,
         description: "Complete powder coating system with automatic spray guns, recovery system, and integrated curing oven for superior surface finishing."
     },
@@ -48,7 +48,7 @@ const machinesData = [
         capacity: "3000x1500 mm",
         specifications: "3kW Fiber Laser",
         location: "Cutting Section - Bay 2",
-        image: "./Img/machines/laser-cutter.jpg",
+        image: "https://images.unsplash.com/photo-1581092160562-2e8e0d2c6d4a?w=800&h=600&fit=crop",
         isCritical: false,
         description: ""
     },
@@ -61,7 +61,7 @@ const machinesData = [
         capacity: "30 Station Turret",
         specifications: "35 Ton, 1250mm Bed",
         location: "Punching Section - Bay 2",
-        image: "./Img/machines/turret-punch.jpg",
+        image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&h=600&fit=crop",
         isCritical: false,
         description: ""
     },
@@ -74,7 +74,7 @@ const machinesData = [
         capacity: "130 Ton",
         specifications: "6-Axis CNC Back Gauge",
         location: "Bending Section - Bay 4",
-        image: "./Img/machines/press-brake.jpg",
+        image: "https://images.pexels.com/photos/4144774/pexels-photo-4144774.jpeg?w=800&h=600&fit=crop",
         isCritical: false,
         description: ""
     },
@@ -87,7 +87,7 @@ const machinesData = [
         capacity: "2500 mm",
         specifications: "Hydraulic, 6mm Capacity",
         location: "Cutting Section - Bay 2",
-        image: "./Img/machines/shearing-machine.jpg",
+        image: "https://images.unsplash.com/photo-1581092921461-6b7e0b8d6e8a?w=800&h=600&fit=crop",
         isCritical: false,
         description: ""
     },
@@ -100,7 +100,7 @@ const machinesData = [
         capacity: "150 kVA",
         specifications: "Pneumatic, Timer Control",
         location: "Welding Section - Bay 3",
-        image: "./Img/machines/spot-welder.jpg",
+        image: "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?w=800&h=600&fit=crop",
         isCritical: false,
         description: ""
     },
@@ -113,7 +113,7 @@ const machinesData = [
         capacity: "300x600 mm",
         specifications: "Precision Grinding",
         location: "Tool Room - Bay 6",
-        image: "./Img/machines/surface-grinder.jpg",
+        image: "https://images.unsplash.com/photo-1581094797147-4e0f7b5c86c7?w=800&h=600&fit=crop",
         isCritical: false,
         description: ""
     },
@@ -126,7 +126,7 @@ const machinesData = [
         capacity: "1200x1200x1000 mm",
         specifications: "3D Measurement",
         location: "Quality Lab - Bay 7",
-        image: "./Img/machines/cmm-machine.jpg",
+        image: "https://images.unsplash.com/photo-1581094484282-9e7e16e6d1b8?w=800&h=600&fit=crop",
         isCritical: false,
         description: ""
     }
@@ -162,7 +162,7 @@ function populateMachinesTable() {
     `).join('');
 }
 
-// Populate Critical Machines Section
+// Populate Critical Machines Section - ONLY TEXT COLOR CHANGED TO WHITE
 function populateCriticalMachines() {
     const criticalMachinesContainer = document.getElementById('critical-machines');
     const criticalMachines = machinesData.filter(machine => machine.isCritical);
@@ -170,12 +170,12 @@ function populateCriticalMachines() {
     if (!criticalMachinesContainer) return;
     
     criticalMachinesContainer.innerHTML = criticalMachines.map(machine => `
-        <div class="machine-card critical-machine">
-            <div class="flex flex-col lg:flex-row gap-6">
+        <div class="machine-card critical-machine bg-[#0f172a]">
+            <div class="flex flex-col lg:flex-row gap-6 ">
                 <div class="lg:w-2/5">
                     <div class="machine-image-container bg-gray-100 rounded-lg flex items-center justify-center h-48">
                         ${machine.image ? 
-                            `<img src="${machine.image}" alt="${machine.name}" class="machine-image" onerror="this.style.display='none'">` :
+                            `<img src="${machine.image}" alt="${machine.name}" class="machine-image w-full h-full object-cover" onerror="this.style.display='none'">` :
                             `<div class="text-gray-400 text-center">
                                 <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -186,26 +186,26 @@ function populateCriticalMachines() {
                     </div>
                 </div>
                 <div class="lg:w-3/5">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">${machine.name} - ${machine.model}</h4>
+                    <h4 class="text-xl font-bold text-white mb-2">${machine.name} - ${machine.model}</h4>
                     <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
                         <div>
-                            <span class="font-semibold text-gray-700">Make:</span>
-                            <span class="text-gray-600 ml-2">${machine.make}</span>
+                            <span class="font-semibold text-gray-300">Make:</span>
+                            <span class="text-white ml-2">${machine.make}</span>
                         </div>
                         <div>
-                            <span class="font-semibold text-gray-700">Capacity:</span>
-                            <span class="text-gray-600 ml-2">${machine.capacity}</span>
+                            <span class="font-semibold text-gray-300">Capacity:</span>
+                            <span class="text-white ml-2">${machine.capacity}</span>
                         </div>
                         <div>
-                            <span class="font-semibold text-gray-700">Location:</span>
-                            <span class="text-gray-600 ml-2">${machine.location}</span>
+                            <span class="font-semibold text-gray-300">Location:</span>
+                            <span class="text-white ml-2">${machine.location}</span>
                         </div>
                         <div>
-                            <span class="font-semibold text-gray-700">Specifications:</span>
-                            <span class="text-gray-600 ml-2">${machine.specifications}</span>
+                            <span class="font-semibold text-gray-300">Specifications:</span>
+                            <span class="text-white ml-2">${machine.specifications}</span>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">${machine.description}</p>
+                    <p class="text-white text-sm leading-relaxed">${machine.description}</p>
                 </div>
             </div>
         </div>
@@ -214,14 +214,12 @@ function populateCriticalMachines() {
 
 // Add Event Listeners
 function addEventListeners() {
-    // Add click handlers for table rows if needed
     const tableRows = document.querySelectorAll('[data-machine-id]');
     tableRows.forEach(row => {
         row.addEventListener('click', function() {
             const machineId = this.getAttribute('data-machine-id');
             const machine = machinesData.find(m => m.id == machineId);
             if (machine) {
-                // Scroll to critical machines section if it's a critical machine
                 if (machine.isCritical) {
                     document.getElementById('critical-machines').scrollIntoView({ 
                         behavior: 'smooth' 

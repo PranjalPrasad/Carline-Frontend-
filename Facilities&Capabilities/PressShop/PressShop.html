@@ -14,22 +14,43 @@
     <!-- Include Header -->
     <div id="header-container"></div>
     
-    <!-- Page Header -->
-    <section class="page-header bg-gray-900 text-white py-12 sm:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Press Shop</h1>
-                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                    Advanced press machinery for precision metal forming and stamping operations with consistent quality
-                </p>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero-section relative overflow-hidden">
+    <!-- Background Video -->
+    <video 
+        class="absolute inset-0 w-full h-full object-cover -z-10" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        poster="./Img/machinery-bg.jpg">
+        <source src="/Img/Video/welding.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+        <source src="https://videos.pexels.com/video-files/3047097/3047097-hd_1920_1080_30fps.webm" type="video/webm">
+        <!-- Fallback static image if video fails -->
+        <img src="./Img/machinery-bg.jpg" alt="Machinery Background" class="w-full h-full object-cover">
+    </video>
+
+    <!-- Dark transparent overlay (keeps text readable) -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-blue-900/50"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10">
+        <div class="text-center z-10">
+            <h1 class="hero-headline text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+              Press<span class="text-gradient">Shop</span>
+            </h1>
+            
+            <p class="hero-subheadline text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+                Advanced press machinery for precision metal forming and stamping operations with consistent quality
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
  
 
     <!-- Press Shop Overview -->
-    <section class="py-12 sm:py-16 bg-white">
+    <section class="py-12 sm:py-16 bg-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div>
@@ -60,7 +81,7 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="./Img/press-shop.jpg" alt="Press Shop at Carline Auto" class="rounded-lg shadow-lg w-full">
+                    <img src="/Img/stamping.webp" alt="Press Shop at Carline Auto" class="rounded-lg shadow-lg w-full">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
                 </div>
             </div>
@@ -78,64 +99,64 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Deep Drawing</h3>
-                    <p class="text-gray-600">Specialized in deep drawn components with precise depth-to-diameter ratios for various applications.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2" style="color:white">Deep Drawing</h3>
+                    <p class="text-gray-600" style="color:white">Specialized in deep drawn components with precise depth-to-diameter ratios for various applications.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Blanking & Piercing</h3>
-                    <p class="text-gray-600">High-precision blanking and piercing operations with tight tolerances and clean edges.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2" style="color:white">Blanking & Piercing</h3>
+                    <p class="text-gray-600" style="color:white">High-precision blanking and piercing operations with tight tolerances and clean edges.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Bending & Forming</h3>
-                    <p class="text-gray-600">Complex bending and forming operations with consistent angles and minimal springback.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2" style="color:white">Bending & Forming</h3>
+                    <p class="text-gray-600" style="color:white">Complex bending and forming operations with consistent angles and minimal springback.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Progressive Die Stamping</h3>
-                    <p class="text-gray-600">Multi-stage progressive die stamping for high-volume production with minimal handling.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2" style="color:white">Progressive Die Stamping</h3>
+                    <p class="text-gray-600" style="color:white">Multi-stage progressive die stamping for high-volume production with minimal handling.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Embossing & Coining</h3>
-                    <p class="text-gray-600">Precision embossing and coining operations for adding textures, logos, and specific features.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2" style="color:white">Embossing & Coining</h3>
+                    <p class="text-gray-600" style="color:white">Precision embossing and coining operations for adding textures, logos, and specific features.</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Assurance</h3>
-                    <p class="text-gray-600">Comprehensive quality checks at every stage with advanced measuring instruments.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2" style="color:white">Quality Assurance</h3>
+                    <p class="text-gray-600" style="color:white">Comprehensive quality checks at every stage with advanced measuring instruments.</p>
                 </div>
             </div>
         </div>
@@ -209,19 +230,19 @@
                 </table>
             </div>
             
-            <div class="mt-8 text-center">
+            <!-- <div class="mt-8 text-center">
                 <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 transition-colors">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
                     Download Complete Machine List (PDF)
                 </a>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <!-- Materials & Applications -->
-    <section class="py-12 sm:py-16 bg-gray-50">
+    <section class="py-12 sm:py-16 bg-gray-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Materials -->
