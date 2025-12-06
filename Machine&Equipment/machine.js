@@ -9,7 +9,7 @@ const machinesData = [
         capacity: "300 Ton",
         specifications: "Programmable, CNC Controlled",
         location: "Press Shop - Bay 1",
-        image: "https://images.unsplash.com/photo-1581092588576-12e700c0c9b8?w=800&h=600&fit=crop",
+        image: "/Img/hydraulic-press-machine-500x500.webp",
         isCritical: true,
         description: "High-capacity 300-ton hydraulic press for heavy-duty metal forming and stamping operations. Features programmable controls and precision pressure management."
     },
@@ -22,7 +22,7 @@ const machinesData = [
         capacity: "250 kg",
         specifications: "4-Station Rotary, MIG/TIG",
         location: "Welding Section - Bay 3",
-        image: "https://images.pexels.com/photos/5691632/pexels-photo-5691632.jpeg?w=800&h=600&fit=crop",
+        image: "/Img/rotary-welding-spm.jpeg",
         isCritical: true,
         description: "Special Purpose Machine with 4-station rotary table for high-volume welding operations. Capable of both MIG and TIG welding processes."
     },
@@ -35,7 +35,7 @@ const machinesData = [
         capacity: "1200x800x600 mm",
         specifications: "Automatic Spray, Curing Oven",
         location: "Finishing Section - Bay 5",
-        image: "https://images.pexels.com/photos/4144773/pexels-photo-4144773.jpeg?w=800&h=600&fit=crop",
+        image: "/Img/product-jpeg.jpg",
         isCritical: true,
         description: "Complete powder coating system with automatic spray guns, recovery system, and integrated curing oven for superior surface finishing."
     },
@@ -48,9 +48,9 @@ const machinesData = [
         capacity: "3000x1500 mm",
         specifications: "3kW Fiber Laser",
         location: "Cutting Section - Bay 2",
-        image: "https://images.unsplash.com/photo-1581092160562-2e8e0d2c6d4a?w=800&h=600&fit=crop",
+        image: "./Img/machines/laser-cutter.jpg",
         isCritical: false,
-        description: ""
+        description: "High-precision fiber laser cutting machine capable of cutting various metals with exceptional accuracy and edge quality."
     },
     {
         id: 5,
@@ -61,9 +61,9 @@ const machinesData = [
         capacity: "30 Station Turret",
         specifications: "35 Ton, 1250mm Bed",
         location: "Punching Section - Bay 2",
-        image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&h=600&fit=crop",
+        image: "./Img/machines/turret-punch.jpg",
         isCritical: false,
-        description: ""
+        description: "High-speed turret punch press with 30-station tool capacity for efficient sheet metal punching operations."
     },
     {
         id: 6,
@@ -74,9 +74,9 @@ const machinesData = [
         capacity: "130 Ton",
         specifications: "6-Axis CNC Back Gauge",
         location: "Bending Section - Bay 4",
-        image: "https://images.pexels.com/photos/4144774/pexels-photo-4144774.jpeg?w=800&h=600&fit=crop",
+        image: "./Img/machines/press-brake.jpg",
         isCritical: false,
-        description: ""
+        description: "CNC-controlled press brake with 6-axis back gauge for precise bending and forming of sheet metal components."
     },
     {
         id: 7,
@@ -87,9 +87,9 @@ const machinesData = [
         capacity: "2500 mm",
         specifications: "Hydraulic, 6mm Capacity",
         location: "Cutting Section - Bay 2",
-        image: "https://images.unsplash.com/photo-1581092921461-6b7e0b8d6e8a?w=800&h=600&fit=crop",
+        image: "./Img/machines/shearing-machine.jpg",
         isCritical: false,
-        description: ""
+        description: "Heavy-duty hydraulic shearing machine for cutting sheet metal up to 6mm thickness and 2500mm width."
     },
     {
         id: 8,
@@ -100,9 +100,9 @@ const machinesData = [
         capacity: "150 kVA",
         specifications: "Pneumatic, Timer Control",
         location: "Welding Section - Bay 3",
-        image: "https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?w=800&h=600&fit=crop",
+        image: "./Img/machines/spot-welding.jpg",
         isCritical: false,
-        description: ""
+        description: "Pneumatic spot welding machine with timer control for consistent weld quality in sheet metal fabrication."
     },
     {
         id: 9,
@@ -113,9 +113,9 @@ const machinesData = [
         capacity: "300x600 mm",
         specifications: "Precision Grinding",
         location: "Tool Room - Bay 6",
-        image: "https://images.unsplash.com/photo-1581094797147-4e0f7b5c86c7?w=800&h=600&fit=crop",
+        image: "./Img/machines/surface-grinder.jpg",
         isCritical: false,
-        description: ""
+        description: "Precision surface grinding machine for tool room applications requiring high accuracy and fine surface finish."
     },
     {
         id: 10,
@@ -126,9 +126,9 @@ const machinesData = [
         capacity: "1200x1200x1000 mm",
         specifications: "3D Measurement",
         location: "Quality Lab - Bay 7",
-        image: "https://images.unsplash.com/photo-1581094484282-9e7e16e6d1b8?w=800&h=600&fit=crop",
+        image: "./Img/machines/cmm-machine.jpg",
         isCritical: false,
-        description: ""
+        description: "Coordinate Measuring Machine for high-precision 3D measurement and inspection of complex components."
     }
 ];
 
@@ -173,14 +173,11 @@ function populateCriticalMachines() {
         <div class="machine-card critical-machine bg-[#0f172a]">
             <div class="flex flex-col lg:flex-row gap-6 ">
                 <div class="lg:w-2/5">
-                    <div class="machine-image-container bg-gray-100 rounded-lg flex items-center justify-center h-48">
+                    <div class="machine-image-container  rounded-lg flex items-center justify-center h-48">
                         ${machine.image ? 
-                            `<img src="${machine.image}" alt="${machine.name}" class="machine-image w-full h-full object-cover" onerror="this.style.display='none'">` :
+                            `<img src="${machine.image}" alt="${machine.name}" class="machine-image w-full h-full object-cover" onerror="handleImageError(this, '${machine.name}')">` :
                             `<div class="text-gray-400 text-center">
-                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                                <span class="text-sm">Image Not Available</span>
+                               <img src="./Img/hydraulic-press-machine-500x500.webp" alt="${machine.name}" class="machine-image w-full h-full object-cover" onerror="this.style.display='none'">
                             </div>`
                         }
                     </div>
@@ -210,6 +207,23 @@ function populateCriticalMachines() {
             </div>
         </div>
     `).join('');
+}
+
+// Handle image loading errors
+function handleImageError(img, machineName) {
+    console.log(`Image not found for ${machineName}: ${img.src}`);
+    img.style.display = 'none';
+    const container = img.parentElement;
+    const fallbackHTML = `
+        <div class="text-gray-400 text-center p-4">
+            <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <div>${machineName}</div>
+            <div class="text-xs mt-1">Image not available</div>
+        </div>
+    `;
+    container.innerHTML = fallbackHTML;
 }
 
 // Add Event Listeners
